@@ -17,6 +17,15 @@ export default function App() {
           >
             {" "}
             open-sourced on Github
+          </a>{" "}
+          and
+          <a
+            href="https://luxury-marzipan-ec7bdc.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            hosted on Netlify
           </a>
         </footer>
       </div>
