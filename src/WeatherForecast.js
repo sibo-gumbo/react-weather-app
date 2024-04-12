@@ -3,15 +3,15 @@ import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 import axios from "axios";
 
-export default function WeatherForecast() {
+export default function WeatherForecast(props) {
   function handleResponse(response) {
     console.log(response.data);
   }
 
   const apiKey = "dc13349b33f710cte63cf40fe59aa2o5";
-  let longitude = 18.4231;
-  let latitude = 33.9221;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}`;
 
   axios.get(apiUrl).then(handleResponse);
   return (
